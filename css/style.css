@@ -128,20 +128,53 @@ body {
       }
 
       & .tarjeta__contenido-avatar {
-        width: 100%;
-        height: 200px;
-        border: 1px solid red;
-
         & figure {
           display: flex;
           align-items: center;
-          & > img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-          }
+          flex-direction: row;
         }
       }
     }
   }
+}
+
+.info-persona {
+  display: flex;
+  width: 384px;
+  align-items: flex-start;
+  gap: 36px;
+  position: relative;
+}
+
+.info-persona .avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.info-persona .flexcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.info-persona .text {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.info-persona .text-wrapper {
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
 }
