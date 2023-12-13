@@ -15,5 +15,133 @@
 /* ******************************** */
 
 /* Colores */
+:root {
+  /* Mode 1 */
+  /* colors */
+  --color-azulmariino: #39466c;
+  --color-beage: #faf4e5;
+  --color-blanco: #ffffff;
+  --color-grisclaro: #ecedee;
+  --color-lila: #e7d2f1;
+  --color-rosado: #f96d6f;
+
+  --degradado: linear-gradient(
+    90deg,
+    rgb(250, 244, 229) 0%,
+    rgb(231, 210, 241) 100%
+  );
+
+  --tam-ancho: 900px;
+  --tam-alto: 1250px;
+}
 
 /* ******************************** */
+body {
+  background-color: var(--color-grisclaro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  & .tarjeta {
+    width: var(--tam-ancho);
+    height: var(--tam-alto);
+    background-color: var(--color-blanco);
+    border-radius: 20px;
+
+    & .tarjeta__banner {
+      width: 100%;
+      height: 482px;
+      border-radius: 20px 20px 0px 0px;
+      background: var(--degradado);
+      padding: 40px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+
+      & .tarjeta__banner-img {
+        grid-column: 2 /3;
+      }
+
+      & .tarjeta__banner-titulos {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: center;
+        font-size: 25px;
+        color: var(--color-azulmariino);
+
+        & h1 {
+          font-weight: 800;
+        }
+        & h3 {
+          line-height: normal;
+          padding-bottom: 40px;
+        }
+        & a {
+          color: var(--Color-blanco, #fff);
+          background: var(--color-rosado);
+          padding: 15px 80px;
+          line-height: normal;
+          grid-row: 1/2;
+          grid-column: 1/2;
+          border-radius: 40px;
+        }
+      }
+    }
+
+    & .tarjeta__contenido {
+      color: var(--Color-azulmariino);
+      padding: 60px 20px;
+      font-size: 24px;
+      font-weight: 700;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 2;
+
+      & p {
+        padding: 20px 0px;
+      }
+
+      /* Boton Central */
+      & .tarjeta__contenido-boton_central {
+        padding: 50px 0px;
+
+        & a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 20px 65px;
+          position: relative;
+          color: var(--color-blanco);
+          background-color: #39466c;
+          text-decoration: none;
+          border-radius: 25px;
+
+          &:hover {
+            background-color: var(--color-rosado);
+            color: var(--color-azulmariino);
+          }
+        }
+      }
+
+      & .tarjeta__contenido-avatar {
+        width: 100%;
+        height: 200px;
+        border: 1px solid red;
+
+        & figure {
+          display: flex;
+          align-items: center;
+          & > img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
