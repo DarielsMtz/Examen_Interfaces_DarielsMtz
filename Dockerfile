@@ -1,5 +1,11 @@
+# Usa una imagen base
 FROM nginx:latest
 
-WORKDIR /usr/share/nginx/html
+# Copia los archivos de tu proyecto al contenedor
+COPY . /usr/share/nginx/html
 
-COPY . .
+# Expon el puerto 80
+EXPOSE 80
+
+# Comando para ejecutar la aplicación cuando se inicie el contenedor
+CMD ["nginx", "-g", "daemon off;"]
